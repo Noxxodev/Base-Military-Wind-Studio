@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --color-default: #CCD0CF;
+  --color-hover: rgb(204, 208, 207);
+  --border-color: rgba(37, 55, 69, 0.671);
+  --accent-blue: #9BA8AB;
+  --accent-blue-light: #CCD0CF;
+}
+
+body {
+  visibility: visible;
+  user-select: none;
+  white-space: nowrap;
+  margin: 0;
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 40;
+}
+
+#options-wrapper {
+  position: fixed;
+  top: calc(48.4%);
+  left: calc(50% + 18pt);
+
+  background: rgba(6, 20, 27, 0.98);
+  border-radius: 14px;
+  border: 1px solid rgba(155, 168, 171, 0.45);
+
+  padding: 0px 2px;
+
+  box-shadow: 0 12px 35px rgba(6, 20, 27, 0.75), 0 0 14px rgba(155, 168, 171, 0.2);
+}
+
+.option-container {
+  color: var(--color-default);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+
+  background: rgba(6, 20, 27, 0.6);
+  font-size: 9pt;
+  line-height: 10pt;
+
+  height: 20pt;
+  width: 100pt;
+
+  border-radius: 6px;
+}
+
+.gradient {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+
+  height: 26pt;
+  width: 96%;
+  max-width: 360px;
+  background: linear-gradient(135deg, rgba(17, 33, 45, 0.95), rgba(6, 20, 27, 0.95));
+  color: #CCD0CF;
+  border-left: 3px solid var(--accent-blue);
+
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  border-radius: 6px;
+  margin: 6px auto;
+  padding: 0 12px;
+
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gradient:hover {
+  background: linear-gradient(135deg, rgba(155, 168, 171, 0.25), rgba(6, 20, 27, 0.95));
+  border-left-color: var(--accent-blue-light);
+}
+
+.gradient:not(:last-child) {
+  border-bottom: 1px solid rgba(204, 208, 207, 0.04);
+}
+
+.option-icon {
+  font-size: 11pt;
+  line-height: 22pt;
+  width: 14pt;
+  margin-left: 8px;
+  margin-right: 6px;
+
+  color: var(--accent-blue);
+  transition: color 0.2s ease;
+}
+
+.gradient:hover .option-icon {
+  color: var(--accent-blue-light);
+}
+
+.option-label {
+  font-size: 9.5pt;
+  font-weight: 500;
+  color: #CCD0CF;
+}
